@@ -1,0 +1,89 @@
+requirements_analysis_task:
+  description: >
+    Analiza la siguiente transcripción de reunión: "{meeting_transcript}".
+    Identifica los objetivos del cliente, los requisitos funcionales y no funcionales, y las restricciones.
+    Genera un documento de requisitos detallado.
+  expected_output: >
+    Un documento markdown con la lista de requisitos priorizados y una descripción del alcance del proyecto.
+  agent: product_owner
+
+architecture_design_task:
+  description: >
+    Basado en los requisitos identificados, diseña la arquitectura del sistema.
+    Define los módulos principales, la estructura de la base de datos, y las tecnologías a utilizar.
+    Asegúrate de considerar la escalabilidad y el rendimiento.
+  expected_output: >
+    Un documento de arquitectura con diagramas (Mermaid), decisiones tecnológicas y estructura de módulos.
+  agent: software_architect
+
+tech_spec_generation_task:
+  description: >
+    Utiliza el diseño de arquitectura para generar especificaciones técnicas detalladas para cada módulo.
+    Define las APIs, los modelos de datos exactos y los algoritmos clave si es necesario.
+  expected_output: >
+    Especificaciones técnicas detalladas listas para ser convertidas en tickets de desarrollo.
+  agent: tech_lead
+
+ticket_generation_task:
+  description: >
+    Desglosa las especificaciones técnicas en tickets de desarrollo individuales.
+    Cada ticket debe tener un título, descripción, criterios de aceptación y prioridad.
+  expected_output: >
+    Una lista de tickets en formato JSON o Markdown, listos para un tablero Kanban.
+  agent: ticket_generator
+
+ticket_orchestration_task:
+  description: >
+    Revisa la lista de tickets generados, asigna prioridades finales y dependencias.
+    Organiza los tickets en un orden lógico de ejecución.
+  expected_output: >
+    Un plan de ejecución ordenado con los tickets asignados y secuenciados.
+  agent: ticket_orchestrator
+
+test_case_generation_task:
+  description: >
+    Para cada ticket y especificación técnica, genera casos de prueba detallados.
+    Incluye pruebas unitarias, de integración y escenarios de prueba manuales si aplica.
+  expected_output: >
+    Un plan de pruebas completo con casos de prueba específicos para cada funcionalidad.
+  agent: qa_architect
+
+code_implementation_task:
+  description: >
+    Implementa el código para los tickets asignados siguiendo las especificaciones técnicas y la arquitectura.
+    Asegúrate de escribir código limpio y comentado.
+  expected_output: >
+    Archivos de código fuente implementando las funcionalidades requeridas.
+  agent: senior_engineer
+
+code_review_task:
+  description: >
+    Revisa el código implementado. Busca errores lógicos, problemas de seguridad, y violaciones de estilo.
+    Proporciona feedback detallado y sugerencias de mejora.
+  expected_output: >
+    Un reporte de revisión de código con aprobaciones o solicitudes de cambios.
+  agent: code_reviewer
+
+test_execution_task:
+  description: >
+    Ejecuta los casos de prueba generados sobre el código implementado.
+    Documenta los resultados de las pruebas y reporta cualquier fallo encontrado.
+  expected_output: >
+    Un reporte de ejecución de pruebas indicando el estado (paso/fallo) de cada caso.
+  agent: qa_engineer
+
+ci_cd_pipeline_task:
+  description: >
+    Simula la ejecución del pipeline de CI/CD. Verifica que el código compile, los tests pasen y no haya vulnerabilidades.
+    Prepara el artefacto de despliegue.
+  expected_output: >
+    Log de ejecución del pipeline y estado de la build.
+  agent: devops_engineer
+
+deployment_task:
+  description: >
+    Despliega el artefacto generado en el entorno de destino (simulado).
+    Verifica que el servicio esté arriba y respondiendo correctamente.
+  expected_output: >
+    Confirmación de despliegue exitoso y URL de acceso (simulada).
+  agent: devops_engineer

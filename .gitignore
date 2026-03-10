@@ -1,0 +1,53 @@
+# Dependency directories
+node_modules/
+.pnpm-store/
+pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env*
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+*.spec
+
+# Next.js / Web
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+
+# CrewAI / AI
+db/
+logs/
+*.db
+*.sqlite3
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Turborepo
+.turbo/
