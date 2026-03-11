@@ -75,25 +75,21 @@ graph TD
    - Fecha
 
 ### 2.4. Tecnologías Propuestas
-- **Backend**: 
-  - Node.js con Express para la creación de la API, permitiendo un desarrollo rápido y eficiente.
-- **IA**: 
-  - Python con bibliotecas como TensorFlow o PyTorch para el desarrollo de modelos de IA, utilizados en el procesamiento de datos y generación de mensajes.
-- **Base de Datos**: 
-  - PostgreSQL como sistema de gestión de base de datos por su robustez y capacidad de manejar transacciones complejas.
-- **API Integration**: 
-  - RESTful APIs para la integración con el ERP Líneas Soft, permitiendo un intercambio de datos flexible.
-- **Frontend**:
-  - React.js para la interfaz de usuario, asegurando una experiencia intuitiva y responsiva.
-- **Mensajería**: 
-  - RabbitMQ o Kafka para la gestión de tareas asincrónicas y la comunicación entre microservicios.
+| Área                       | Tecnología                                    | Descripción                                                    |
+|---------------------------|-----------------------------------------------|----------------------------------------------------------------|
+| **Backend**               | Node.js con Express                           | Creación de API flexible y eficiente.                           |
+| **IA**                    | Python con TensorFlow/PyTorch                 | Desarrollo de modelos de IA para procesamiento de datos.       |
+| **Base de Datos**         | PostgreSQL                                    | Sistema de gestión de base de datos robusto y confiable.       |
+| **API Integration**       | RESTful APIs                                  | Integración con ERP Líneas Soft.                               |
+| **Frontend**              | React.js                                      | Desarrollo de una interfaz de usuario responsiva y moderna.      |
+| **Mensajería**            | RabbitMQ/Kafka                                | Gestión de tareas asíncronas y comunicación entre microservicios.|
 
 ## 3. Consideraciones de Escalabilidad y Rendimiento
 - **Escalabilidad**: 
   - Se utilizarán microservicios para cada módulo del sistema, permitiendo escalar independientemente según la carga de trabajo. La arquitectura basada en contenedores (Docker) facilitará la gestión y despliegue de los servicios.
   
 - **Rendimiento**: 
-  - Implementar cachés (como Redis o Memcached) para almacenar datos frecuentes reducirá la carga en la base de datos y mejorará el tiempo de respuesta del sistema.
+  - Implementar cachés como Redis o Memcached para almacenar datos frecuentes, lo que reducirá la carga en la base de datos y mejorará el tiempo de respuesta del sistema. La API debe ser capaz de responder a las solicitudes en un promedio de menos de 300 ms.
 
 ## 4. Seguridad
 - **Autenticación y Autorización**: 
@@ -143,7 +139,7 @@ Automatiza la gestión y optimización de pedidos.
 | GET    | /api/pedidos  | Obtener la lista de pedidos.         |
 
 #### Algoritmos Clave
-- **Optimización de Rutas** 
+- **Optimización de Rutas**
   - Utiliza técnicas de algoritmos de optimización (Ej. Dijkstra o A*) para definir la ruta más eficiente para la entrega de pedidos.
 
 ### 1.3. Recordatorios de Cobros
@@ -231,4 +227,7 @@ API para la integración de datos entre el sistema de IA y el ERP existente.
 
 ## 4. Conclusiones
 Estas especificaciones técnicas establecen una base clara para el desarrollo del sistema de automatización de la gestión de pedidos y contabilización de ingresos en aceitesuicos.com. Cada módulo y API ha sido detallado para facilitar la implementación y asegurar que se cumplan los requisitos del cliente.
-```
+
+``` 
+
+Esta documentación cubre múltiples aspectos centrales de la arquitectura del sistema, asegurando que se alcancen los objetivos propuestos por el cliente de una manera efectiva y escalable.

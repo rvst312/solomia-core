@@ -1,13 +1,13 @@
 # Despliegue del Artefacto en el Entorno de Destino
 
-## Fecha de Ejecución: [Fecha Actual]  
-## Versión del Software: [Versión del Software Probado]  
-## Nombre del Tester: [Tu Nombre]  
+## Fecha de Ejecución: 2023-10-15  
+## Versión del Software: 1.0.0  
+## Nombre del Tester: Especialista DevOps  
 
 ### Iniciando el Despliegue...
 
 1. **Desplegando el artefacto generado:**
-   - Artefacto: `mi-aplicacion-v[versión].zip`
+   - Artefacto: `mi-aplicacion-v1.0.0.zip`
    - **Estado:** Despliegue en curso...
    - Mensaje: Despliegue completado satisfactoriamente.
 

@@ -1,6 +1,6 @@
 ### Resumen del Plan de Ejecución
 
-El objetivo de este proyecto es desarrollar un sistema de gestión de usuarios y productos de manera eficiente y organizada, asegurando que todas las partes del sistema estén bien integradas. Se seguirán unos pasos claros, comenzando por la configuración del entorno de desarrollo, seguido del diseño de la base de datos, implementación de la autenticación y desarrollo de la API y la interfaz de usuario, finalizando con pruebas unitarias. 
+El objetivo de este proyecto es desarrollar un sistema de gestión de usuarios y productos de manera eficiente y organizada, asegurando que todas las partes del sistema estén bien integradas. Se seguirán unos pasos claros, comenzando por la configuración del entorno de desarrollo, seguido del diseño de la base de datos, implementación de la autenticación y desarrollo de la API y la interfaz de usuario, finalizando con pruebas unitarias.
 
 El siguiente plan de ejecución detalla los tickets, sus prioridades, y las dependencias entre ellos, para garantizar un flujo de trabajo óptimo.
 

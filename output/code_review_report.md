@@ -1,3 +1,4 @@
+```markdown
 # Reporte de Revisión de Código
 
 ## Resumen
@@ -96,5 +97,4 @@ if (password.length < 8) {
 - **Solicitudes de Cambios**: Revise los problemas de seguridad relacionados con la generación de tokens y el manejo de contraseñas. Implementar las sugerencias de validación y manejo de errores puede mejorar significativamente la robustez y seguridad del sistema.
 
 Espero que estas observaciones te sean útiles para mejorar la calidad del código y la seguridad de tu sistema. Estoy disponible para cualquier consulta adicional o aclaración sobre las recomendaciones realizadas.
-
----
+```

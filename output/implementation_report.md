@@ -1,8 +1,4 @@
-A continuación se presenta el código fuente para implementar un sistema de autenticación de usuario en Node.js utilizando Express y MongoDB. El código incluye las funcionalidades para registro, inicio de sesión, recuperación de contraseña y cierre de sesión. Además, está bien documentado y organizado según las mejores prácticas.
-
-### Estructura del Proyecto
-
-```
+```bash
 /auth-system
 |-- /controllers
 |   |-- authController.js
@@ -250,4 +246,4 @@ describe('POST /api/auth/register', () => {
    npm test
    ```
 
-Este código es una implementación básica de un sistema de autenticación de usuarios, y puede ser extendido con características adicionales como validaciones más robustas, middleware de seguridad y funciones avanzadas según sea necesario.
+Este código es una implementación básica de un sistema de autenticación de usuarios y puede ser extendido con características adicionales como validaciones más robustas, middleware de seguridad y funciones avanzadas según sea necesario.

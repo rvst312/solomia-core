@@ -13,6 +13,11 @@ class SoftwareAgencyCrew:
     agents_config = os.path.join(os.path.dirname(__file__), 'config/agents.yaml')
     tasks_config = os.path.join(os.path.dirname(__file__), 'config/tasks.yaml')
 
+    def __init__(self, output_dir: str = 'output'):
+        self.output_dir = output_dir
+        # Ensure output directory exists
+        os.makedirs(self.output_dir, exist_ok=True)
+
     # Agents
     @agent
     def product_owner(self) -> Agent:
@@ -99,77 +104,77 @@ class SoftwareAgencyCrew:
     def requirements_analysis_task(self) -> Task:
         return Task(
             config=self.tasks_config['requirements_analysis_task'],
-            output_file='output/requirements.md'
+            output_file=os.path.join(self.output_dir, 'requirements.md')
         )
 
     @task
     def architecture_design_task(self) -> Task:
         return Task(
             config=self.tasks_config['architecture_design_task'],
-            output_file='output/architecture.md'
+            output_file=os.path.join(self.output_dir, 'architecture.md')
         )
 
     @task
     def tech_spec_generation_task(self) -> Task:
         return Task(
             config=self.tasks_config['tech_spec_generation_task'],
-            output_file='output/tech_specs.md'
+            output_file=os.path.join(self.output_dir, 'tech_specs.md')
         )
 
     @task
     def ticket_generation_task(self) -> Task:
         return Task(
             config=self.tasks_config['ticket_generation_task'],
-            output_file='output/tickets.json'
+            output_file=os.path.join(self.output_dir, 'tickets.json')
         )
 
     @task
     def ticket_orchestration_task(self) -> Task:
         return Task(
             config=self.tasks_config['ticket_orchestration_task'],
-            output_file='output/ticket_plan.md'
+            output_file=os.path.join(self.output_dir, 'ticket_plan.md')
         )
 
     @task
     def test_case_generation_task(self) -> Task:
         return Task(
             config=self.tasks_config['test_case_generation_task'],
-            output_file='output/test_plan.md'
+            output_file=os.path.join(self.output_dir, 'test_plan.md')
         )
 
     @task
     def code_implementation_task(self) -> Task:
         return Task(
             config=self.tasks_config['code_implementation_task'],
-            output_file='output/implementation_report.md'
+            output_file=os.path.join(self.output_dir, 'implementation_report.md')
         )
 
     @task
     def code_review_task(self) -> Task:
         return Task(
             config=self.tasks_config['code_review_task'],
-            output_file='output/code_review_report.md'
+            output_file=os.path.join(self.output_dir, 'code_review_report.md')
         )
 
     @task
     def test_execution_task(self) -> Task:
         return Task(
             config=self.tasks_config['test_execution_task'],
-            output_file='output/test_results.md'
+            output_file=os.path.join(self.output_dir, 'test_results.md')
         )
 
     @task
     def ci_cd_pipeline_task(self) -> Task:
         return Task(
             config=self.tasks_config['ci_cd_pipeline_task'],
-            output_file='output/cicd_log.md'
+            output_file=os.path.join(self.output_dir, 'cicd_log.md')
         )
 
     @task
     def deployment_task(self) -> Task:
         return Task(
             config=self.tasks_config['deployment_task'],
-            output_file='output/deployment_report.md'
+            output_file=os.path.join(self.output_dir, 'deployment_report.md')
         )
 
     @crew

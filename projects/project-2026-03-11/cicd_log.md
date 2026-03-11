@@ -1,8 +1,8 @@
-# Ejecutando Pipeline de CI/CD
+# Ejecución del Pipeline de CI/CD
 
-## Fecha de Ejecución: [Fecha Actual]  
-## Versión del Software: [Versión del Software Probado]  
-## Nombre del Tester: [Tu Nombre]  
+## Fecha de Ejecución: 2023-10-15  
+## Versión del Software: 1.0.0  
+## Nombre del Tester: Especialista DevOps  
 
 ### Iniciando Pipeline...
 
@@ -15,18 +15,18 @@
    - Ejecutando comando: `npm test`
    - **Resultados de los Casos de Prueba:**
 
-    | ID del Caso de Prueba | Descripción del Caso de Prueba               | Resultado | Observaciones                                  |
-    |-----------------------|----------------------------------------------|-----------|------------------------------------------------|
-    | CP-001                | Verificar el inicio de sesión con credenciales válidas | PASO      | La sesión se inicia correctamente.            |
+    | ID del Caso de Prueba | Descripción del Caso de Prueba                     | Resultado | Observaciones                                   |
+    |-----------------------|----------------------------------------------------|-----------|-------------------------------------------------|
+    | CP-001                | Verificar el inicio de sesión con credenciales válidas | PASO      | La sesión se inicia correctamente.             |
     | CP-002                | Verificar el inicio de sesión con credenciales inválidas | FALLA     | Aparece mensaje de error: "Credenciales incorrectas". |
-    | CP-003                | Probar la recuperación de contraseña       | PASO      | Se envía el correo de recuperación correctamente. |
-    | CP-004                | Comprobar el registro de nuevos usuarios   | FALLA     | No se envía el correo de activación.          |
-    | CP-005                | Validar la funcionalidad de "Recordar contraseña" | PASO      | La opción funciona como se esperaba.          |
-    | CP-006                | Verificar la búsqueda de productos          | PASO      | La búsqueda retorna resultados relevantes.     |
-    | CP-007                | Comprobar el proceso de pago                | FALLA     | Error en la validación de tarjeta de crédito. |
-    | CP-008                | Validar la generación de reportes           | PASO      | Los reportes se generan correctamente.        |
-    | CP-009                | Probar la funcionalidad de cierre de sesión | PASO      | El usuario se cierra sesión sin problemas.    |
-    | CP-010                | Verificar la carga de datos en la página principal | FALLA     | La página tarda mucho tiempo en cargar.       |
+    | CP-003                | Probar la recuperación de contraseña               | PASO      | Se envía el correo de recuperación correctamente. |
+    | CP-004                | Comprobar el registro de nuevos usuarios           | FALLA     | No se envía el correo de activación.           |
+    | CP-005                | Validar la funcionalidad de "Recordar contraseña"  | PASO      | La opción funciona como se esperaba.           |
+    | CP-006                | Verificar la búsqueda de productos                  | PASO      | La búsqueda retorna resultados relevantes.      |
+    | CP-007                | Comprobar el proceso de pago                        | FALLA     | Error en la validación de tarjeta de crédito.  |
+    | CP-008                | Validar la generación de reportes                   | PASO      | Los reportes se generan correctamente.         |
+    | CP-009                | Probar la funcionalidad de cierre de sesión         | PASO      | El usuario se cierra sesión sin problemas.     |
+    | CP-010                | Verificar la carga de datos en la página principal | FALLA     | La página tarda mucho tiempo en cargar.        |
 
    - **Total de Casos de Prueba Ejecutados:** 10
    - **Total de Casos de Prueba Pasados:** 6
@@ -40,7 +40,7 @@
 4. **Preparación del Artefacto de Despliegue**
    - Generando artefacto...
    - **Estado:** Éxito
-   - Artefacto creado: `mi-aplicacion-v[versión].zip`
+   - Artefacto creado: `mi-aplicacion-v1.0.0.zip`
 
 ### Resumen de la Ejecución
 
@@ -53,7 +53,7 @@
 
 - Se deben investigar y corregir los fallos encontrados en los casos de prueba CP-002, CP-004, CP-007 y CP-010. 
 - Se recomienda realizar pruebas de regresión una vez que las correcciones se hayan implementado para asegurar que las modificaciones no introduzcan nuevos problemas.
-
+  
 ### Siguiente Paso
 
 - **Reportar los Bugs Encontrados:**
@@ -66,14 +66,14 @@
 
 # Despliegue del Artefacto en el Entorno de Destino
 
-## Fecha de Ejecución: [Fecha Actual]  
-## Versión del Software: [Versión del Software Probado]  
-## Nombre del Tester: [Tu Nombre]  
+## Fecha de Ejecución: 2023-10-15  
+## Versión del Software: 1.0.0  
+## Nombre del Tester: Especialista DevOps  
 
 ### Iniciando el Despliegue...
 
 1. **Desplegando el artefacto generado:**
-   - Artefacto: `mi-aplicacion-v[versión].zip`
+   - Artefacto: `mi-aplicacion-v1.0.0.zip`
    - **Estado:** Despliegue en curso...
    - Mensaje: Despliegue completado satisfactoriamente.
 
