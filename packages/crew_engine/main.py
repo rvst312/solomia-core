@@ -1,8 +1,30 @@
 import os
 import sys
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
+from crewai_tools import (
+    DirectoryReadTool,
+    FileReadTool,
+    ScrapeWebsiteTool,
+    FileWriterTool,
+    CodeInterpreterTool,
+    GithubSearchTool
+)
+
+# Define common tools
+docs_tool = DirectoryReadTool(directory='./')
+file_tool = FileReadTool()
+scrape_tool = ScrapeWebsiteTool()
+file_writer_tool = FileWriterTool()
+code_interpreter_tool = CodeInterpreterTool()
+try:
+    github_tool = GithubSearchTool()
+except Exception:
+    github_tool = None
 
 # Ensure we can import from shared_types if needed
 # sys.path.append(os.path.join(os.path.dirname(__file__), '../../packages'))
@@ -24,7 +46,8 @@ class SoftwareAgencyCrew:
         return Agent(
             config=self.agents_config['product_owner'],
             verbose=True,
-            memory=True
+            memory=True,
+            tools=[docs_tool, file_tool, scrape_tool]
         )
 
     @agent
@@ -32,7 +55,8 @@ class SoftwareAgencyCrew:
         return Agent(
             config=self.agents_config['software_architect'],
             verbose=True,
-            memory=True
+            memory=True,
+            tools=[docs_tool, file_tool, scrape_tool]
         )
 
     @agent
@@ -40,7 +64,8 @@ class SoftwareAgencyCrew:
         return Agent(
             config=self.agents_config['tech_lead'],
             verbose=True,
-            memory=True
+            memory=True,
+            tools=[docs_tool, file_tool, file_writer_tool]
         )
 
     @agent
@@ -48,7 +73,8 @@ class SoftwareAgencyCrew:
         return Agent(
             config=self.agents_config['ticket_generator'],
             verbose=True,
-            memory=True
+            memory=True,
+            tools=[docs_tool, file_tool, file_writer_tool]
         )
 
     @agent
@@ -56,7 +82,8 @@ class SoftwareAgencyCrew:
         return Agent(
             config=self.agents_config['ticket_orchestrator'],
             verbose=True,
-            memory=True
+            memory=True,
+            tools=[docs_tool, file_tool]
         )
 
     @agent
@@ -64,15 +91,21 @@ class SoftwareAgencyCrew:
         return Agent(
             config=self.agents_config['qa_architect'],
             verbose=True,
-            memory=True
+            memory=True,
+            tools=[docs_tool, file_tool, file_writer_tool]
         )
 
     @agent
     def senior_engineer(self) -> Agent:
+        tools = [docs_tool, file_tool, file_writer_tool]
+        if github_tool:
+            tools.append(github_tool)
+            
         return Agent(
             config=self.agents_config['senior_engineer'],
             verbose=True,
-            memory=True
+            memory=True,
+            tools=tools
         )
 
     @agent
@@ -80,7 +113,8 @@ class SoftwareAgencyCrew:
         return Agent(
             config=self.agents_config['code_reviewer'],
             verbose=True,
-            memory=True
+            memory=True,
+            tools=[docs_tool, file_tool, code_interpreter_tool]
         )
 
     @agent
@@ -88,7 +122,8 @@ class SoftwareAgencyCrew:
         return Agent(
             config=self.agents_config['qa_engineer'],
             verbose=True,
-            memory=True
+            memory=True,
+            tools=[docs_tool, file_tool, code_interpreter_tool]
         )
 
     @agent
@@ -96,7 +131,8 @@ class SoftwareAgencyCrew:
         return Agent(
             config=self.agents_config['devops_engineer'],
             verbose=True,
-            memory=True
+            memory=True,
+            tools=[docs_tool, file_tool, code_interpreter_tool]
         )
 
     # Tasks

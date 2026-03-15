@@ -1,0 +1,110 @@
+```json
+{
+    "tickets": [
+        {
+            "id": 1,
+            "title": "Configuración del entorno de desarrollo",
+            "description": "Configurar el entorno de desarrollo incluyendo herramientas requeridas como Node.js, Express y MongoDB.",
+            "acceptance_criteria": [
+                "Se debe documentar el proceso de instalación de herramientas.",
+                "El entorno debe estar configurado para que pueda iniciar el servidor con un solo comando.",
+                "El README debe contener instrucciones claras para nuevos desarrolladores."
+            ],
+            "priority": "Baja",
+            "creation_date": "2023-10-01",
+            "due_date": "2023-10-05",
+            "status": "To Do",
+            "category": "Backend",
+            "tags": ["setup", "environment"],
+            "estimated_effort_hours": 8
+        },
+        {
+            "id": 2,
+            "title": "Diseñar la base de datos",
+            "description": "Crear el esquema de la base de datos incluyendo tablas y relaciones necesarias para la gestión de usuarios y productos.",
+            "acceptance_criteria": [
+                "La base de datos debe contener al menos dos tablas: 'usuarios' y 'productos'.",
+                "Las relaciones entre las tablas deben estar claramente definidas.",
+                "Se deben definir índices para las consultas más comunes."
+            ],
+            "priority": "Alta",
+            "creation_date": "2023-10-02",
+            "due_date": "2023-10-10",
+            "status": "To Do",
+            "category": "Backend",
+            "tags": ["database", "design"],
+            "estimated_effort_hours": 16
+        },
+        {
+            "id": 3,
+            "title": "Implementar autentificación de usuario",
+            "description": "Desarrollar la funcionalidad de autentificación de usuarios utilizando JWT. Incluir endpoints para login y registro de usuarios.",
+            "acceptance_criteria": [
+                "Se debe poder registrar un nuevo usuario proporcionando un nombre, correo y contraseña.",
+                "El usuario debe recibir un token JWT al iniciar sesión.",
+                "El token debe ser válido por 1 hora.",
+                "La autenticación debe ser segura y no permitir inyecciones de SQL."
+            ],
+            "priority": "Alta",
+            "creation_date": "2023-10-11",
+            "due_date": "2023-10-18",
+            "status": "To Do",
+            "category": "Backend",
+            "tags": ["authentication", "JWT"],
+            "estimated_effort_hours": 12
+        },
+        {
+            "id": 4,
+            "title": "Desarrollar la API de productos",
+            "description": "Crear los endpoints RESTful para la gestión de productos: listar, crear, actualizar y eliminar productos.",
+            "acceptance_criteria": [
+                "API debe permitir listar todos los productos.",
+                "API debe permitir crear un nuevo producto con nombre, descripción y precio.",
+                "API debe permitir actualizar un producto existente.",
+                "API debe permitir eliminar un producto existente."
+            ],
+            "priority": "Media",
+            "creation_date": "2023-10-19",
+            "due_date": "2023-10-26",
+            "status": "To Do",
+            "category": "Backend",
+            "tags": ["API", "products"],
+            "estimated_effort_hours": 20
+        },
+        {
+            "id": 5,
+            "title": "Crear interfaz de usuario para el registro",
+            "description": "Desarrollar la interfaz de usuario para la página de registro de nuevos usuarios.",
+            "acceptance_criteria": [
+                "La interfaz debe tener campos para nombre, correo y contraseña.",
+                "El botón de registro debe estar deshabilitado hasta que todos los campos estén completos.",
+                "Debe mostrarse un mensaje de éxito o error tras intentar registrar al usuario."
+            ],
+            "priority": "Alta",
+            "creation_date": "2023-10-27",
+            "due_date": "2023-11-01",
+            "status": "To Do",
+            "category": "Frontend",
+            "tags": ["UI", "registration"],
+            "estimated_effort_hours": 10
+        },
+        {
+            "id": 6,
+            "title": "Implementar pruebas unitarias para la API",
+            "description": "Desarrollar pruebas unitarias para los endpoints de la API de productos utilizando una herramienta de pruebas como Mocha o Jest.",
+            "acceptance_criteria": [
+                "Se deben crear pruebas para todos los endpoints de la API.",
+                "Las pruebas deben cubrir al menos el 80% del código de la API.",
+                "El resultado de las pruebas debe ser fácil de interpretar para los desarrolladores."
+            ],
+            "priority": "Media",
+            "creation_date": "2023-11-02",
+            "due_date": "2023-11-08",
+            "status": "To Do",
+            "category": "Backend",
+            "tags": ["testing", "API"],
+            "estimated_effort_hours": 12
+        }
+    ]
+}
+```
